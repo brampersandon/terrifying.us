@@ -31,7 +31,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
       animation:help 100ms linear infinite;
     }
     @keyframes help{
@@ -145,5 +145,10 @@
       <img src="/mild-panic.png" width="200px" height="200px" />
     </div>
   </div>
+  <script>
+    // I learned how to fix overscroll on mobile Safari so now I have to do this everywhere
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  </script>
 </body>
 </html>
