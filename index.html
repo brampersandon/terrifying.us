@@ -34,6 +34,16 @@
       height: calc(var(--vh, 1vh) * 100);
       animation:help 100ms linear infinite;
     }
+    #panic{ 
+      animation:ohfuck 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.1) infinite;
+    }
+    @keyframes ohfuck{
+      0%{transform:none;}
+      50%{transform:none;}
+      51%{transform:scale(20);}
+      90%{transform:scale(20);}
+      100%{transform:none;}
+    }
     @keyframes help{
       1%{ -webkit-transform: translate(0px, -1px);transform: translate(0px, -1px);}
       2%{ -webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}
